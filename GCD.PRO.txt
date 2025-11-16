@@ -1,0 +1,7 @@
+predicates
+	gcd(integer,integer,integer).
+	gcd1(integer,integer,integer).
+clauses
+	gcd(X,0,X).
+	gcd(X,Y,Z):- R=X mod Y gcd(Y,R,Z).
+	gcd1(A,B,C,D):- GCD(A,B,M), gcd(M,C,D).

@@ -1,0 +1,7 @@
+domains
+	list=integer*.
+predicates
+	con(list,list,list).
+clauses
+	con([],L,L).
+	con([H|T],L2,[H|R]):- con(T,L2,R).
